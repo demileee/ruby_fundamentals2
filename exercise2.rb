@@ -16,7 +16,7 @@ com = gets.chomp.to_i
 if doc >= 4
   if dra >=4 && com < 3
     puts "We recommend #{documentary} and #{drama}."
-  elsif dra < 3 && com >= 3
+  elsif dra < 3 && com >= 4
     puts "We recommend #{documentary} and #{comedy}."
   elsif dra >= 4 && com >= 4
     puts "We recommend #{documentary} and #{dramedy}."
