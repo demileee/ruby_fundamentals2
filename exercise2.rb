@@ -23,12 +23,20 @@ if doc >= 4
   elsif dra < 3 && com < 3
     puts "We recommend #{documentary}."
   end
-elsif dra >= 4 && com >= 4
-  puts "We recommend #{dramedy}."
-elsif dra >= 4 && com < 4
-  puts "We recommend #{drama}."
-elsif dra < 3 && com >= 4
+elsif dra >= 4
+  if com >= 4
+    puts "We recommend #{dramedy}."
+  else
+    puts "We recommend #{drama}."
+  end
+elsif com >= 4
   puts "We recommend #{comedy}."
+elsif doc > dra && doc > com
+  puts "We recommend #{documentary}"
+elsif dra > doc && dra > com
+  puts "We recommend #{drama}"
+elsif com > doc && com > dra
+  puts "We recommend #{comedy}"
 else
   puts "Maybe you should read a book instead, like Britannica."
 end
